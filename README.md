@@ -34,14 +34,14 @@ emitter.on('event', function (next) {
     }
 
     this.result.push(this.args.message1);
-});
+}, -10);
 
 emitter.emit('event', {message1: 'hello'}, function (err, result) {
     console.info(result);
     /**
      * Result = ['hello', 'world'];
      */
-}, -10);
+});
 ```
 
 Listeners can also be removed;

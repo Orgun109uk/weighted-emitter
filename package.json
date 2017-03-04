@@ -1,7 +1,7 @@
 {
     "name": "weighted-emitter",
     "description": "Provides an event emitter with weighted callbacks.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [
         "Event Emitter",
         "Weighted events"
