@@ -1,7 +1,7 @@
 /**
  * The Gruntfile containing the tasks.
  *
- * @author Nic Ashton <nic.ashton109@gmail.com>
+ * @author Orgun109uk <orgun109uk@gmail.com>
  */
 
 'use strict';
