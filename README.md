@@ -41,7 +41,7 @@ emitter.emit('event', {message1: 'hello'}, function (err, result) {
     /**
      * Result = ['hello', 'world'];
      */
-});
+}, -10);
 ```
 
 Listeners can also be removed;
