@@ -1,7 +1,7 @@
 {
     "name": "weighted-emitter",
     "description": "Provides an event emitter with weighted callbacks.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "Event Emitter",
         "Weighted events"
@@ -23,7 +23,6 @@
         "grunt": "^1.0.1",
         "grunt-contrib-clean": "^1.0.0",
         "grunt-contrib-jshint": "^1.1.0",
-        "grunt-contrib-yuidoc": "^1.0.0",
         "grunt-eslint": "^19.0.0",
         "grunt-mocha-istanbul": "^5.0.2",
         "istanbul": "^0.4.5",

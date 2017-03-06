@@ -269,5 +269,72 @@ describe('WeightedEmitter', () => {
                 done();
             });
         });
+
+        it('emitting without args and done callback with no listener shouldnt error', () => {
+            const me = new WeightedEmitter();
+
+            me.on('test', function(next) {
+                unitjs.object(this).is({
+                    args: { 'hello': 'world' },
+                    result: ['hello']
+                });
+
+                this.result.push(this.args.hello);
+                next();
+            });
+
+            me.emit('test');
+        });
+
+        it('emitting without args and done callback shouldnt error', () => {
+            const me = new WeightedEmitter();
+            me.emit('test');
+        });
+
+        it('should emit without args and done callback', (done) => {
+            const me = new WeightedEmitter();
+
+            me.on('test', function(next) {
+                if (!this.result) {
+                    this.result = [];
+                }
+
+                this.result.push(this.args.hello);
+                next();
+            });
+
+            me.on('test', function(next) {
+                if (!this.result) {
+                    this.result = [];
+                }
+
+                this.result.push(this.args.hello);
+                next();
+            });
+
+            me.on('test', function(next) {
+                if (!this.result) {
+                    this.result = [];
+                }
+
+                this.result.push(this.args.hello);
+                next();
+            });
+
+            me.on('test', function(next) {
+                if (!this.result) {
+                    this.result = [];
+                }
+
+                this.result.push(this.args.hello);
+                next();
+            });
+
+            me.emit('test', { 'hello': 'world' }, (err, result) => {
+                unitjs.array(result).hasLength(4);
+
+                done();
+            });
+        });
     });
 });
